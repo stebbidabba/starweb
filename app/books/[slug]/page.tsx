@@ -1,8 +1,10 @@
 import Link from 'next/link'
 import { getBook } from '@/data/books'
 
-export default function BookDetailPage({ params }: { params: { slug: string } }) {
-  const book = getBook(params.slug)
+export default async function BookDetailPage(props: any) {
+  const params = await props?.params
+  const slug: string = (params?.slug as string) || ''
+  const book = getBook(slug)
   if (!book) return notFound()
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">
