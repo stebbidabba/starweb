@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+
+html, body, :root { height: 100%; }
+
+body {
+  @apply text-white font-body antialiased;
+  background: radial-gradient(1200px 600px at 20% 10%, #1E1234 0%, transparent 60%),
+              radial-gradient(900px 500px at 80% 30%, #120D1A 0%, transparent 60%),
+              linear-gradient(180deg, #0B0A10 0%, #120D1A 50%, #1E1234 100%);
+}
+
+.starfield {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.starfield .star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #00D1FF;
+  opacity: 0.4;
+  border-radius: 9999px;
+  animation: twinkle 4s ease-in-out infinite;
+}
+
+.starfield { animation: drift 60s ease-in-out infinite alternate; }
+
+.prose-elegant h1 { @apply font-heading tracking-wide text-5xl sm:text-6xl text-purple3 drop-shadow-[0_0_12px_rgba(155,92,246,0.2)]; }
+.prose-elegant h2 { @apply font-heading tracking-wide text-3xl sm:text-4xl text-purple3 drop-shadow-[0_0_10px_rgba(155,92,246,0.15)]; }
+.prose-elegant p  { line-height: 1.6; }
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-md px-5 py-2.5 font-medium text-white shadow-glow focus-ring;
+  background: linear-gradient(135deg, #6C3B9C, #9B5CF6);
+  transition: transform 200ms ease, box-shadow 200ms ease, filter 200ms ease;
+}
+.btn-primary:hover { filter: brightness(1.05); box-shadow: 0 0 24px rgba(155,92,246,0.35); transform: translateY(-1px); }
+.btn-outline { @apply rounded-md border border-white/15 px-5 py-2.5 text-white/90 hover:border-purple2 focus-ring; }
+
+.card-translucent { @apply rounded-xl border border-white/10 bg-white/5 backdrop-blur; transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease; }
+.card-translucent:hover { transform: translateY(-2px) scale(1.01); box-shadow: 0 8px 30px rgba(0,0,0,0.35), 0 0 20px rgba(155,92,246,0.15); border-color: rgba(155,92,246,0.4); }
+
+.focus-ring:focus-visible { outline: 2px solid #9B5CF6; outline-offset: 3px; }
+
+
