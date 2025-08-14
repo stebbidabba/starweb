@@ -40,14 +40,23 @@ export default function HomePage() {
 
       {/* Intro section */}
       <div className="mx-auto max-w-6xl px-4 py-12">
-        <SectionHeading title="About Sigrun Star" sub="Astrology made approachable — discover your sign, explore deeper insights, and find resources to support your journey." />
-        <div className="space-y-3 text-white/80">
-          <p>
-            Sigrun Star is a calm, insightful place to learn about your zodiac and chart. We focus on clarity and practicality so you can turn cosmic patterns into everyday guidance.
-          </p>
-          <p>
-            Whether you are just getting started or looking to go deeper, you will find curated books, personal readings, and monthly updates designed to help you navigate decisions, relationships, and growth with confidence.
-          </p>
+        <div className="mx-auto max-w-3xl">
+          {/* Title in a box (match style, keep current fonts/colors) */}
+          <div className="mx-auto max-w-xl rounded-md border border-white/15 bg-white/5 px-6 py-5 text-center">
+            <h2 className="font-heading text-3xl sm:text-4xl text-purple3">About Sigrun Star</h2>
+          </div>
+          {/* Text under the box */}
+          <div className="mt-8 space-y-4 text-center text-white/80">
+            <p>
+              Astrology made approachable — discover your sign, explore deeper insights, and find resources to support your journey.
+            </p>
+            <p>
+              Sigrun Star is a calm, insightful place to learn about your zodiac and chart. We focus on clarity and practicality so you can turn cosmic patterns into everyday guidance.
+            </p>
+            <p>
+              Whether you are just getting started or looking to go deeper, you will find curated books, personal readings, and monthly updates designed to help you navigate decisions, relationships, and growth with confidence.
+            </p>
+          </div>
         </div>
       </div>
 
