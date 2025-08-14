@@ -38,6 +38,19 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* Intro section */}
+      <div className="mx-auto max-w-6xl px-4 py-12">
+        <SectionHeading title="About Sigrun Star" sub="Astrology made approachable — discover your sign, explore deeper insights, and find resources to support your journey." />
+        <div className="space-y-3 text-white/80">
+          <p>
+            Sigrun Star is a calm, insightful place to learn about your zodiac and chart. We focus on clarity and practicality so you can turn cosmic patterns into everyday guidance.
+          </p>
+          <p>
+            Whether you are just getting started or looking to go deeper, you will find curated books, personal readings, and monthly updates designed to help you navigate decisions, relationships, and growth with confidence.
+          </p>
+        </div>
+      </div>
+
       {/* What we offer */}
       <div className="mx-auto max-w-6xl px-4 py-16">
         <SectionHeading title="What we offer" sub="Explore books, readings, cards, articles, and bundle discounts" />
