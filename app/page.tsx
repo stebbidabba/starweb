@@ -25,9 +25,8 @@ export default function HomePage() {
         </div>
 
         {/* Centered content */}
-        <div className="mx-auto w-full max-w-5xl text-center -translate-y-4 md:-translate-y-8">
-          <h1 className="prose-elegant h1 font-heading">Choose your zodiac sign</h1>
-          <p className="mx-auto mt-3 max-w-2xl text-white/85">Pick your sign to explore traits, strengths, challenges, and curated recommendations.</p>
+        <div className="mx-auto w-full max-w-5xl text-center -translate-y-6 md:-translate-y-10">
+          <h1 className="font-heading tracking-wide text-5xl sm:text-6xl text-purple3 drop-shadow-[0_0_16px_rgba(155,92,246,0.25)]">Choose your zodiac sign</h1>
           <div className="mx-auto mt-8 grid max-w-4xl grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
             {Object.values(SIGNS).map((s) => (
               <button key={s.slug} onClick={() => pick(s.slug)} className="card-translucent p-4 text-left hover:shadow-glow focus-ring">
