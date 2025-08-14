@@ -39,37 +39,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   )
 }
 
-function Header() {
-  return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-[#0B0A10]/70 backdrop-blur supports-[backdrop-filter]:bg-[#0B0A10]/50">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-        <Link href="/" aria-label="Sigrun Star home" className="flex items-center">
-          <div className="relative h-12 w-12 overflow-visible">
-            <Image src="/img/logo.png" alt="Sigrun Star logo" width={48} height={48} priority className="h-12 w-12 rounded transform origin-center scale-150" />
-          </div>
-        </Link>
-        <nav className="hidden gap-6 md:flex">
-          <NavLink href="/astrology">Horoscopes</NavLink>
-          <NavLink href="/books">Books</NavLink>
-          <NavLink href="/reading">Readings</NavLink>
-          <NavLink href="/about">About</NavLink>
-          <NavLink href="/blog">Blog</NavLink>
-          <NavLink href="/contact">Contact</NavLink>
-          <NavLink href="/offers">Offers</NavLink>
-        </nav>
-      </div>
-    </header>
-  )
-}
-
-function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
-  return (
-    <Link href={href} className="text-sm text-white/80 transition-colors hover:text-purple2 focus-ring">
-      {children}
-    </Link>
-  )
-}
-
 function Footer() {
   return (
     <footer className="mt-16 border-t border-white/10 bg-[#0B0A10]">
