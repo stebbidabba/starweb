@@ -8,14 +8,7 @@ export default function AboutPage() {
           <img src="/img/starrynight" alt="Portrait of Sigrún on starry background" className="w-full rounded-lg border border-white/10" />
         </div>
         <div className="md:col-span-2 text-white/80">
-          <p>
-            I’m Sigrún — an astrologer and lifelong student of the sky. My practice blends classical techniques with
-            compassionate guidance to help you navigate change and purpose.
-          </p>
-          <p className="mt-3">
-            I believe astrology is a language of timing and meaning. Whether you’re new to the craft or returning to it,
-            my aim is to make it useful, grounded, and inspiring.
-          </p>
+          <p>insert text</p>
         </div>
       </div>
     </div>
