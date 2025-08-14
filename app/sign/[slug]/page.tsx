@@ -3,10 +3,13 @@ import { SIGNS, type Sign } from '@/lib/zodiac'
 import SectionHeading from '@/components/SectionHeading'
 import NewsletterBar from '@/components/NewsletterBar'
 
-export default function SignPage({ params, searchParams }: { params: { slug: Sign }, searchParams: Record<string, string | string[] | undefined> }) {
-  const sign = SIGNS[params.slug]
+export default async function SignPage(props: any) {
+  const params = await props?.params
+  const searchParams = await props?.searchParams
+  const slug = (params?.slug as Sign) || undefined
+  const sign = slug ? SIGNS[slug] : undefined
   if (!sign) return notFound()
-  const date = typeof searchParams.date === 'string' ? searchParams.date : undefined
+  const date = typeof searchParams?.date === 'string' ? searchParams.date : undefined
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
