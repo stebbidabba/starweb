@@ -34,7 +34,7 @@ export default function SiteHeader() {
 
 function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
-    <Link href={href} className="text-sm text-white/80 transition-colors hover:text-purple2 focus-ring">
+    <Link href={href as any} className="text-sm text-white/80 transition-colors hover:text-purple2 focus-ring">
       {children}
     </Link>
   )
